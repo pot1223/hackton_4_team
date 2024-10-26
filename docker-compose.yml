@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: ./frontend  # Next.js 폴더
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # 외부 포트 3000 -> 내부 컨테이너 포트 3000
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./AI  # FastAPI 폴더
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"  # 외부 포트 80 -> 내부 컨테이너 포트 80
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
