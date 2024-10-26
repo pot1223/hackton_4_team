@@ -1,0 +1,49 @@
+/* styles/BookCard.module.css */
+
+/* 카드와 토픽을 감싸는 래퍼 */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 8px; /* 카드 사이의 간격 */
+  margin-right: 8px; /* 카드 사이의 간격 */
+}
+
+/* 토픽 텍스트 스타일 */
+.topic {
+  font-size: 24px;
+  color: black;
+  margin-top: 24px;
+  margin-bottom: 8px; /* 카드와 간격 */
+}
+
+.title {
+  font-size: 28px;
+}
+
+/* 카드 스타일 */
+.card {
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* 이미지 스타일 */
+.imageWrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
