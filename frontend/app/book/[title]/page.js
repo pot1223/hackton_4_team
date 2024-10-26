@@ -12,8 +12,12 @@ import axios from 'axios';
 export default function BookDetail() {
   const { title } = useParams();
   const [book, setBook] = useState(null);
+  const [randomImage, setRandomImage] = useState('');
 
   useEffect(() => {
+    const randomImageIndex = Math.floor(Math.random() * 13) + 1; // 1부터 8까지 랜덤 숫자
+    const selectedImage = `/images/photo${randomImageIndex}.png`;
+    setRandomImage(selectedImage); // 선택된 이미지 설정
     if (!title) return; // title이 없으면 실행 안 함
     const fetchBookInfo = async () => {
       try {
@@ -68,7 +72,7 @@ export default function BookDetail() {
       </div>
 
       <div className={styles.imageContainer}>
-        <img src={'https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788936434595.jpg'} alt={book.title} />
+        <img src={randomImage} alt={book.title} />
       </div>
     </div>
   );
