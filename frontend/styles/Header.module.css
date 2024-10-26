@@ -1,0 +1,13 @@
+/* styles/Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4a5a31;
+  color: white;
+}
+
+.h1 {
+  color: white;
+}

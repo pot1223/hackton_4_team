@@ -1,0 +1,46 @@
+/* styles/BookDetail.module.css */
+.detailContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  max-width: 800px;
+  margin: 32px auto;
+}
+
+.textContainer {
+  width: 60%;
+  padding-right: 16px;
+}
+
+.imageContainer {
+  width: 35%;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+/* 타이틀과 내용 간격 조정 */
+.textRow {
+  font-size: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px; /* 행 간격 조정 */
+  line-height: 1.6;
+}
+
+.textRow strong {
+  min-width: 100px; /* 타이틀의 최소 너비 지정 */
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+
+.bookTitle {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: #4a5a31;
+}
