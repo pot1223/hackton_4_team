@@ -27,7 +27,7 @@ export default function Home() {
         const bookTitles = response.data.books.map((title, idx) => ({
           id: idx + 1, // 임시 ID 설정
           title,
-          image: 'https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788936434595.jpg' // 기본 이미지
+          image: `/images/photo${Math.floor(Math.random() * 13) + 1}.png` // 기본 이미지
         }));
         setBooks(bookTitles); // 책 목록 상태 업데이트
         setTopic(topic);
