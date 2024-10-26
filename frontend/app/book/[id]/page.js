@@ -28,7 +28,7 @@ const bookDetails = {
   },
 };
 
-const BookDetail = ({ params }) => {
+export default function BookDetail({ params }) {
   const { id } = params;
   const [book, setBook] = useState(null);
 
@@ -80,5 +80,3 @@ const BookDetail = ({ params }) => {
     </div>
   );
 };
-
-export default BookDetail;
